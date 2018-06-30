@@ -1,0 +1,56 @@
+Installation and use of software and files described and linked in the process "Vegas-2-HandBrake" will happen at your own risk. The process was tested with Vegas Pro 15 on Windows 10 only.
+
+Run installer.exe, confirm and wait for installation to finish.
+
+You can still set things up manually by following instructions at the end.
+
+============================================================
+
+How to use Vegas2HandBrake in Vegas Pro
+
+Put clip(s) into the Vegas Pro timeline. Edit your Vegas project. 
+Before you start encoding, you should know that the frameserver has a bug that makes audio faulty at the last second. To correct this, tick "Add 1-second buffer before rendering" in preferences to automatically add a buffer of exactly 1 second length at the end of your project(and auto-delete it afterwards). 
+In the toolbar click the symbol "Send2HandBrake" and wait until HandBrake opens and scans the input video. 
+In HandBrake do all the adjustments necessary for the AVC encoding, start rendering and wait until HandBrake automatically quits after it finished rendering.
+
+If you set a loop-region in the Vegas timeline this process will automatically use only the timeline section of your loop-region for encoding. So before starting the Vegas2HandBrake process always take care of the loop-region.
+
+If this automation process will be interrupted ¨C intentionally or not ¨C in Vegas Pro quit the frameserver process manually, then in the toolbar click the icon "preferences" and click "unmount" button in the popup window.
+
+=============================================================
+
+Manual Installation
+
+Download and install HandBrake ("Windows 64 Bit"): 
+http://handbrake.fr/downloads.php
+
+Open HandBrake. 
+Menu "Tools/Options": 
+"General":  "When done" -> "Quit HandBrake".
+"Output Files":  Select "Automatically name output files". 
+Define desired render path at "Default Path". 
+Define desired output file name at "Format". 
+At "MP4 File Extension" -> "Always use MP4". 
+Quit HandBrake.
+
+Download and install DebugMode Frameserver (version 2.15 for Vegas Pro 13+):
+http://www.debugmode.com/frameserver/
+
+Download AviSynthPlus :
+https://github.com/pinterf/AviSynthPlus/releases
+Install AviSynthPlus, let type of installation "Recommended installation" untouched, don't uncheck any given selections.
+
+Download and install Pismo File Mount Audit Package (Windows Install Package):
+http://www.pismotechnic.com/download/
+
+Move the folder "frameserve_scripts" to the Vegas script menu  (C:\ProgramData\VEGAS Pro\Script Menu\).
+Move the folder "Script Depends" to the Vegas programdata path  (C:\ProgramData\VEGAS Pro). 
+
+Open Vegas Pro, if applicable refresh the script menu via "Tools/Scripting/Rescan Script Menu Folder".
+Open menu "Options/Customize Toolbar". 
+In the left pane of the window "Customize Toolbar" (far below) select the script "Send2HandBrake" and move it to the right pane by clicking "Add".
+In the left pane of the window "Customize Toolbar" (far below) select the script "preferences" and move it to the right pane by clicking "Add".
+
+Installation is finished now.
+
+

@@ -1,0 +1,2 @@
+Installation and use of software and files described and linked in the process "Vegas-2-HandBrake" will happen at your own risk. The process was tested with Vegas Pro 15 on Windows 10 only.
+Rewritten by maz-1 (ohmygod19993@gmail.com)

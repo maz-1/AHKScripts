@@ -1,1 +1,4 @@
-/*/ResHacker.ini
+*/ResHacker.ini
+VegasToHandbrake/download/*
+VegasToHandbrake/frameserver/*.exe
+VegasToHandbrake/frameserver/*.bat
